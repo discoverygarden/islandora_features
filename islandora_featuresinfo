@@ -1,6 +1,0 @@
-name = Islandora Features
-description = Islandora Features drush scripts
-package = Islandora
-version = 7.x-dev
-core = 7.x
-
