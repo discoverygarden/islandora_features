@@ -28,6 +28,15 @@ function islandora_features_drush_command() {
  */
 function drush_islandora_features_enable() {
 
+  $modules = array("berkeley_theme_feature");
+drush_print("before install");
+features_install_modules($modules);
+drush_print("after install");
+
+}
+
+function drush_islandora_features_post_enable(){
+  
   // We need to clear all the cache.
   drupal_flush_all_caches();
 
@@ -38,5 +47,6 @@ function drush_islandora_features_enable() {
   menu_rebuild();
   
   drush_print("Islandora feature is enabled completely.");
-
+  
 }
+
